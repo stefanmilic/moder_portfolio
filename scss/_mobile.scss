@@ -18,6 +18,9 @@
       line-height: 1;
       margin-bottom: 1rem;
     }
+    h3 {
+      font-size: 20px;
+    }
   }
   ul.menu-nav,
   div.menu-branding {
@@ -30,18 +33,31 @@
     }
   }
   .menu-nav {
-    height: 60vh;
+    height: 62vh;
     transform: translate3d(-100%, 0, 0);
     font-size: 24px;
   }
   .menu-branding {
-    height: 30vh;
+    height: 28vh;
     transform: translate3d(100%, 0, 0);
     .portrait {
       margin-top: 5px;
       height: 200px;
       width: 200px;
     }
+  }
+  .about-info {
+    grid-template-areas:
+      "bioimage"
+      "bio"
+      "job1"
+      "job2"
+      "job3";
+
+    grid-template-columns: 1fr;
+  }
+  #about h1 {
+    font-size: 50px;
   }
 }
 

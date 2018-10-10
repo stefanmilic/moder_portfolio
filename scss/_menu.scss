@@ -12,7 +12,7 @@
     width: 28px;
     height: 3px;
     margin-bottom: 5px;
-    background: white;
+    background: set-text-color($primary-color);
     @include easeOut;
   }
   //rotate into x with menu lines
@@ -87,10 +87,11 @@
       transform: translate3d(0, 0, 0);
     }
     .portrait {
-      margin-top: -300px;
       background-image: url("../img/me2.jpg");
       background-size: cover;
       width: 250px;
+      margin-left: -45px;
+      margin-top: -600px;
       height: 250px;
       border-radius: 50%;
       border: 3px solid $secondary-color;
@@ -116,7 +117,7 @@
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 300;
-    color: #fff;
+    color: set-text-color($primary-color);
     @include easeOut;
 
     &:hover {
@@ -132,4 +133,9 @@
   .nav-item:nth-child(#{$x}) {
     transition-delay: $x * 0.1s;
   }
+}
+
+main {
+  align-items: center;
+  text-align: center;
 }
