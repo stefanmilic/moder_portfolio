@@ -1,0 +1,16 @@
+{
+  "name": "potrofolio",
+  "version": "1.0.0",
+  "description": "responsive portofolio website",
+  "main": "app.js",
+  "scripts": {
+    "sass":"node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "stefan milic",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.9.3"
+  }
+}
+
+

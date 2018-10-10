@@ -1,0 +1,2 @@
+ /*-node-sass will look in scss folder and output on dist/css folder
+    but must be recursive because we will have some error with debug-*/ 
