@@ -70,10 +70,15 @@
 
   .projects {
     grid-template-columns: 1fr;
+    text-align: center;
+    font-size: 15px;
   }
 
-  .boxes div {
+  .wrapper {
     grid-template-columns: 1fr;
+    .boxes div {
+      grid-template-columns: 1fr;
+    }
   }
 }
 
@@ -87,10 +92,17 @@
   .projects {
     grid-template-columns: 1fr;
   }
-  .boxes div {
-    font-size: 25px;
-    padding: 1rem;
+  .wrapper {
     grid-template-columns: 1fr;
+    .boxes div {
+      font-size: 25px;
+      padding: 1rem;
+      grid-template-columns: 1fr;
+    }
+    .swing {
+      animation: swing 2s ease forwards;
+      transform-origin: 120px 80px;
+    }
   }
 
   .menu-nav {
