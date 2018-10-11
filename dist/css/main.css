@@ -261,11 +261,13 @@ footer {
 
 @media screen and (max-width: 768px) {
   main {
+    padding: 2rem;
     align-items: center;
     text-align: center; }
     main .lg-heading {
       line-height: 1;
-      margin-bottom: 1rem; }
+      margin-bottom: 1rem;
+      font-size: 5rem; }
     main h3 {
       font-size: 20px; }
   ul.menu-nav,
@@ -293,7 +295,7 @@ footer {
   #about h1 {
     font-size: 50px; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); }
+    grid-template-columns: 1fr; }
   .boxes div {
     grid-template-columns: 1fr; } }
 
@@ -305,4 +307,15 @@ footer {
   .boxes div {
     font-size: 25px;
     padding: 1rem;
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .menu-nav {
+    height: 60vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .menu-branding {
+    height: 30vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-branding .portrait {
+      margin-top: 5px;
+      height: 200px;
+      width: 200px; } }
