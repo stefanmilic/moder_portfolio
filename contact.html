@@ -44,12 +44,52 @@
   <main id='about'>
     <h1> Contact <span class="text-secondary">Me</span> </h1>
     <h2 class="sm-heading">This is how you can reach me...</h2>
-    <div class="boxes">
-      <div>
-        <span class='text-secondary'>Email:</span> milicstefan6@gmail.com
+    <div class='wrapper'>
+      <div class="boxes">
+        <div>
+          <span class='text-secondary'>Email:</span> milicstefan6@gmail.com
+        </div>
+        <div>
+          <span class='text-secondary'>Phone:</span> 064 034-6667
+        </div>
       </div>
-      <div>
-        <span class='text-secondary'>Phone:</span> 064 034-6667
+
+      <div class='aside'>
+        <div class='cross'>
+          <div id='demo' class='x'>x</div>
+        </div>
+        <div class='text'>
+          <div id='formMessage' style="color:#eece1a; padding-top:10px; display: none"> Thank you for
+            contact me</div>
+          <h2>Contact form</h2>
+          <p>Email me if you intrested about my skils</p>
+        </div>
+
+        <form class='form' id="gform">
+
+          <div class='control-form'>
+            <label for="name">Your Name: </label>
+            <input id="name" name="name" type="text" placeholder="Your name" />
+          </div>
+
+          <div class='control-form'>
+            <label for="message">Message: </label>
+            <textarea id="message" name="message" rows="10" style="width:180px" placeholder="Message..."></textarea>
+          </div>
+
+          <div class='control-form'>
+            <label for="email">Your Email Address:</label>
+            <input id="email" name="email" type="email" value="" required placeholder="your.name@email.com" />
+
+          </div>
+
+          <button>
+            <i class="fa fa-paper-plane"></i>&nbsp;Send
+          </button>
+
+        </form>
+
+
       </div>
     </div>
 
@@ -57,7 +97,10 @@
   <footer>
     Copyright &copy; 2018
   </footer>
-  <script src='js/main.js'> </script>
+  <script src='js/main.js'>
+
+
+  </script>
 </body>
 
 </html>
