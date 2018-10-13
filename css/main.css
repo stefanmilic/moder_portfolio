@@ -99,6 +99,7 @@
   box-sizing: border-box; }
 
 body {
+  background-image: url("../img/b.jpg");
   background: #444;
   color: #fff;
   height: 100%;

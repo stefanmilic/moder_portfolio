@@ -70,4 +70,11 @@ $(function() {
 
     return false;
   });
+
+  window.addEventListener("load", () => {
+    let wrap = document.querySelector("#wrap");
+    setTimeout(() => {
+      document.body.removeChild(wrap);
+    }, 1000);
+  });
 });
