@@ -75,6 +75,6 @@ $(function() {
     let wrap = document.querySelector("#wrap");
     setTimeout(() => {
       document.body.removeChild(wrap);
-    }, 0);
+    }, 3000);
   });
 });
