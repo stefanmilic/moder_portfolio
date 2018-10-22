@@ -108,9 +108,12 @@ main {
 
 .job {
   background: lighten($primary-color, 5);
-  padding: 0.5rem;
+
+  padding: 1.5rem;
   border-bottom: $secondary-color 5px solid;
   text-align: center;
+  line-height: 1.7;
+  text-align: justify;
 }
 .projects {
   display: grid;
@@ -134,7 +137,7 @@ main {
   .aside {
     color: white;
     position: relative;
-    background-color: darken($secondary-color, 30);
+    background-color: lighten($primary-color, 10);
     box-sizing: border-box;
     height: 100%;
     text-align: center;
@@ -233,7 +236,23 @@ main {
     }
   }
 }
+.resume {
+  display: inline-block;
+  margin: 2rem;
+  font-size: 2rem;
+  border: 3px solid white;
+  padding: 1rem 2rem;
+  @include easeOut;
 
+  &:hover {
+    padding: 0.5rem 1.5rem;
+    background-color: $secondary-color;
+    color: set-text-color($secondary-color);
+    span {
+      color: set-text-color($secondary-color);
+    }
+  }
+}
 //button styles
 
 .btn {
@@ -264,6 +283,10 @@ footer {
   background: darken($primary-color, 10);
   color: set-text-color($primary-color);
   height: 60px;
+}
+
+.modal > * {
+  color: #333;
 }
 
 //style aside form
