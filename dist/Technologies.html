@@ -14,7 +14,6 @@
 
 <body id="bg-img">
 
-
   <header>
     <div class="menu-btn">
       <div class="btn-line"></div>
@@ -27,11 +26,11 @@
         </div>
       </div>
       <ul class='menu-nav'>
-        <li class="nav-item current">
+        <li id='demo' class="nav-item ">
           <a href="index.html" class="nav-item-link">Home</a>
         </li>
-        <li class="nav-item">
-          <a href="about.html" class="nav-item-link">About me</a>
+        <li class="nav-item current">
+          <a href="about.html" class="nav-item-link ">About me</a>
         </li>
         <li class="nav-item">
           <a href="work.html" class="nav-item-link">My Work</a>
@@ -45,35 +44,16 @@
       </ul>
     </nav>
   </header>
-  <main id='home'>
+  <main id='about'>
 
-    <h1 class="lg-heading">Stefan <span class="text-secondary">Milic</span> </h1>
-    <h2 class="sm-heading">Web Developer, Programer & Designer</h2>
-    <div class="icons">
-      <a href="#">
-        <i class="fab fa-twitter fa-2x"></i>
-      </a>
-      <a href="#">
-        <i class="fab fa-facebook fa-2x"></i>
-      </a>
-      <a href="#">
-        <i class="fab fa-linkedin fa-2x"></i>
-      </a>
-      <a href="#">
-        <i class="fab fa-github fa-2x"></i>
-      </a>
-    </div>
+    <h1>Tehnologies</h1>
+
+
   </main>
+  <footer>
+    Copyright &copy; 2018
+  </footer>
   <script src='js/main.js'> </script>
-  <script>
-    window.addEventListener('load', () => {
-      let wrap = document.querySelector('#wrap')
-      setTimeout(() => {
-        document.body.removeChild(wrap)
-      }, 3000)
-
-    })
-  </script>
 </body>
 
 </html>
