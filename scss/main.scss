@@ -12,25 +12,35 @@ body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
-//headings
-
 h1,
-h2,
-h3 {
+h2 {
   margin: 0;
   font-weight: 400;
+}
 
-  &.lg-heading {
-    font-size: 6rem; //one ram =16px beacuse html font size is 16px if we change html font size rem is also changing
+.lg-heading {
+  font-size: 6rem; //one ram =16px beacuse html font size is 16px if we change html font size rem is also changing
+  color: rgba(lighten($secondary-color, 2), 0.6);
+}
+.sm-heading {
+  margin-bottom: 1em;
+  padding: 0.2rem 1rem;
+  //lighten a color which we want to light
+  background: rgba(lighten($primary-color, 2), 0.5);
+  .scale {
+    font-size: 1.5em;
+    animation: scale 1s ease-in-out 2.5s forwards;
   }
-  &.sm-heading {
-    margin-bottom: 1em;
-    padding: 0.2rem 1rem;
-    //lighten a color which we want to light
-    background: rgba(lighten($primary-color, 2), 0.5);
-  }
+}
+
+.sm-head {
+  @extend .sm-heading;
+  padding: 0;
 }
 
 a {
@@ -119,6 +129,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
+
   img {
     width: 100%;
     border: 3px solid white;
@@ -185,31 +196,6 @@ main {
 .swing {
   animation: swing 2s ease forwards;
   transform-origin: 50px 50px;
-}
-@keyframes drop {
-  0% {
-    opacity: 0;
-  }
-  70% {
-    transform: translateY(480px);
-  }
-  100% {
-    transform: translateY(420px);
-    opacity: 1;
-  }
-}
-
-@keyframes swing {
-  0% {
-    transform: translateY(420px) rotateX(0deg);
-  }
-  75% {
-    transform: translateY(420px) rotateX(90deg);
-  }
-  100% {
-    transform: translateY(-700px);
-    opacity: 0.3;
-  }
 }
 
 .boxes {
@@ -287,6 +273,44 @@ footer {
 
 .modal > * {
   color: #333;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4) translateX(150px);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes drop {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    transform: translateY(480px);
+  }
+  100% {
+    transform: translateY(420px);
+    opacity: 1;
+  }
+}
+
+@keyframes swing {
+  0% {
+    transform: translateY(420px) rotateX(0deg);
+  }
+  75% {
+    transform: translateY(420px) rotateX(90deg);
+  }
+  100% {
+    transform: translateY(-700px);
+    opacity: 0.3;
+  }
 }
 
 //style aside form
