@@ -10,6 +10,7 @@ $(function() {
   const inputName = $("#name");
   const textArea = $("#message");
   const inputEmail = $("#email");
+  const movingText = $(".lg-heading");
 
   //set initial state of menu
 
@@ -71,10 +72,26 @@ $(function() {
     return false;
   });
 
+  let wrap = $("#spinner");
+
   window.addEventListener("load", () => {
-    let wrap = document.querySelector("#wrap");
     setTimeout(() => {
-      document.body.removeChild(wrap);
+      // document.body.removeChild(wrap);
+      wrap.remove();
     }, 0);
   });
+
+  let i = 0;
+  let txt = "Stefan Milic";
+  let speed = 200;
+  let sum = "";
+  function textmove() {
+    if (i < txt.length) {
+      sum += txt[i];
+      i++;
+      movingText.html(sum);
+    }
+    setTimeout(textmove, speed);
+  }
+  textmove();
 });
