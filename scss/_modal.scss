@@ -1,0 +1,86 @@
+//colors
+$grey: #666;
+$white: #fff;
+$color_mine_shaft_approx: #333;
+$black_50: rgba(0, 0, 0, 0.5);
+$wild_sand: #f4f4f4;
+$black_20: rgba(0, 0, 0, 0.2);
+$black_17: rgba(0, 0, 0, 0.17);
+$color_celeste_approx: #ccc;
+$black: #000;
+
+//fonts
+$font_0: Arial;
+$font_1: Helvetica;
+$font_2: sans-serif;
+
+//@extend-elements
+//original selectors
+//.closeBtn:hover, .closeBtn:focus
+%extend_1 {
+  color: $black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: $black_50;
+  color: #fff;
+}
+.modal-content {
+  background-color: $wild_sand;
+  margin: 20% auto;
+  width: 70%;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: 0 5px 8px 0 $black_20, 0 7px 20px 0 $black_17;
+  animation-name: modalopen;
+  animation-duration: 1s;
+}
+.modal-header {
+  background: $grey;
+  padding: 15px;
+  color: $white;
+  h2 {
+    margin: 0;
+  }
+}
+.modal-footer {
+  background: $grey;
+  padding: 10px;
+  color: $white;
+  text-align: center;
+  h3 {
+    margin: 0;
+  }
+}
+.modal-body {
+  padding: 10px 20px;
+  background: lighten($grey, 3.2);
+}
+.closeBtn {
+  color: $color_celeste_approx;
+  float: right;
+  font-size: 30px;
+  color: $white;
+  &:hover {
+    @extend %extend_1;
+  }
+  &:focus {
+    @extend %extend_1;
+  }
+}
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

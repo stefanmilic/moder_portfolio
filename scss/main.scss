@@ -1,5 +1,6 @@
 @import "config";
 @import "menu";
+@import "modal";
 
 * {
   box-sizing: border-box;
@@ -76,7 +77,6 @@ main {
   }
 
   &#home {
-    overflow: hidden; //no scroll bars
     h1 {
       margin-top: 20vh; //"view port heights" this is 100 line in across on all page and we take 20 in this example
     }
@@ -269,10 +269,6 @@ footer {
   background: darken($primary-color, 10);
   color: set-text-color($primary-color);
   height: 60px;
-}
-
-.modal > * {
-  color: #333;
 }
 
 @keyframes scale {

@@ -17,7 +17,6 @@ $(function() {
   let showMenu = false;
 
   menuBtn.click(function() {
-    console.log("radi");
     if (!showMenu) {
       menuBtn.addClass("close");
       menu.addClass("show");
@@ -94,4 +93,33 @@ $(function() {
     setTimeout(textmove, speed);
   }
   textmove();
+
+  let modal = [];
+  for (let i = 1; i <= 6; i++) {
+    modal.push(document.getElementById("id0" + i));
+  }
+
+  window.addEventListener("click", function(event) {
+    modal.map(item => {
+      if (event.target === item) {
+        let item = event.target;
+        item.style.display = "none";
+      }
+    });
+  });
+
+  let btns = $(".w3-button");
+  let modals = $(".w3-modal");
+  Array.from(modals).forEach(item => {
+    item.addEventListener("click", function(event) {
+      if (event.target && event.target.nodeName == "BUTTON") {
+        this.style.display = "none";
+      }
+    });
+  });
+  // Array.from(btns).map(item => {
+  //   item.addEventListener("click", function() {
+  //     item.parentNode.parentNode.parentNode.style.display = "none";
+  //   });
+  // });
 });
