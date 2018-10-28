@@ -10,8 +10,8 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
     crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
 
 </head>
 
@@ -32,13 +32,13 @@
         <li id='demo' class="nav-item ">
           <a href="index.html" class="nav-item-link">Home</a>
         </li>
-        <li class="nav-item current">
+        <li class="nav-item ">
           <a href="about.html" class="nav-item-link ">About me</a>
         </li>
         <li class="nav-item ">
           <a href="Technologies.html" class="nav-item-link">Technologies</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item current">
           <a href="work.html" class="nav-item-link">My Work</a>
         </li>
         <li class="nav-item">
@@ -50,15 +50,15 @@
   <main id='about'>
 
     <h1>My <span class="text-secondary">Work</span> </h1>
-    <div class="sm-head">
+    <div class="sm-heading">
       <h2 class='scale'>Check out some of my projects...</h2>
     </div>
     <br><br>
     <div class="projects">
       <div class="item">
-        <a href="#">
-          <img href="#modal1" class="waves-effect waves-light modal-trigger" src="./img/projects/Capture.PNG" alt="">
-        </a>
+
+        <img onclick="openModal(1)" src="./img/projects/Capture.PNG" alt="">
+
         <a target="_blank" href="https://shopp-cart.herokuapp.com" class="btn-light">
           <i class="fas fa-eye"></i>Project
         </a>
@@ -67,9 +67,9 @@
         </a>
       </div>
       <div class="item">
-        <a href="#">
-          <img href="#modal2" class="waves-effect waves-light modal-trigger" src="./img/projects/chat.PNG" alt="">
-        </a>
+
+        <img onclick="openModal(2)" src="./img/projects/chat.PNG" alt="">
+
         <a target="_blank" href="https://messagechat.herokuapp.com/" class="btn-light">
           <i class="fas fa-eye"></i>Project
         </a>
@@ -78,9 +78,9 @@
         </a>
       </div>
       <div class="item">
-        <a href="#">
-          <img href="#modal3" class="waves-effect waves-light modal-trigger" src="./img/projects/Pong.PNG" alt="">
-        </a>
+
+        <img onclick="openModal(3)" src="./img/projects/Pong.PNG" alt="">
+
         <a href="http://www.mediafire.com/file/n6fhr7kbckzdznk/Pong_netBeans.zip#" class="btn-light">
           <i class="fas fa-eye"></i>Project
         </a>
@@ -89,9 +89,9 @@
         </a>
       </div>
       <div class="item">
-        <a href="#">
-          <img href="#modal4" class="waves-effect waves-light modal-trigger" src="./img/projects/parallax.PNG" alt="">
-        </a>
+
+        <img onclick="openModal(4)" src="./img/projects/parallax.PNG" alt="">
+
         <a href="#" class="btn-light">
           <i class="fas fa-eye"></i>Project
         </a>
@@ -100,10 +100,9 @@
         </a>
       </div>
       <div class="item">
-        <a href="#">
-          <img href="#modal5" class="waves-effect waves-light modal-trigger" height="250" src="./img/projects/nav_enterprise_architect.jpg"
-            alt="">
-        </a>
+
+        <img onclick="openModal(5)" height="250" src="./img/projects/nav_enterprise_architect.jpg" alt="">
+
         <a target="blank" href="http://www.mediafire.com/file/x37n2xbip287qrp/Prodavnica+racunara+5.1.eap" class="btn-light">
           <i class="fas fa-eye"></i>Project
         </a>
@@ -112,10 +111,7 @@
         </a>
       </div>
       <div class="item">
-        <a href="#">
-          <img href="#modal6" class="waves-effect waves-light modal-trigger" height="250" src="./img/projects/quartus_splash.png"
-            alt="">
-        </a>
+        <img onclick="openModal(6)" height="250" src="./img/projects/quartus_splash.png" alt="">
         <a target="blank" href="http://www.mediafire.com/file/gpu8a2q2g7uk9vj/Finalni.zip/file" class="btn-light">
           <i class="fas fa-eye"></i>Project
         </a>
@@ -126,108 +122,151 @@
     </div>
 
     <!-- Modal Structure for shopping cart -->
-    <div id="modal1" class="modal">
+
+    <div id="simpleModal1" class="modal">
       <div class="modal-content">
-        <h4>Shopping application</h4>
-        <p>This is a shopping application where i used node js, express, jade template, mongodb with mongoose, passport
-          js, bcrypt
-          to hash all passwords, stripe payment . I deployed this application on heroku so click on project to see how
-          it looks.</p>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+        <div class="modal-header">
+          <span onclick="closeModal(1)" class="closeBtn">&times;</span>
+          <h2>Shopping application</h2>
+        </div>
+        <div class="modal-body">
+          <p>This is a shopping application where i used node js, express, jade template, mongodb with mongoose,
+            passport
+            js, bcrypt
+            to hash all passwords, stripe payment . I deployed this application on heroku so click on project to see
+            how
+            it looks.</p>
+        </div>
+        <div class="modal-footer">
+          <h3><i class="fas fa-book-reader"></i></h3>
+        </div>
       </div>
     </div>
 
 
     <!-- Modal Structure for chat -->
-    <div id="modal2" class="modal">
+
+
+    <div id="simpleModal2" class="modal">
       <div class="modal-content">
-        <h4>Chat application</h4>
-        <p>I built a Node.js chat application with express and Socket.io,Socket.io enables real-time, bidirectional and
-          event-based communication.
-          It works on every platform, browser or device, focusing equally on reliability and speed. This apllication
-          looks simple but the code is a bit advanced. I didn't focus on disagn but i put some animations, sound
-          effects and you can upload your picture for avatar.
-          I put this appliaction on heroku so
-          click on project to see how it looks.</p>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+        <div class="modal-header">
+          <span onclick="closeModal(2)" class="closeBtn">&times;</span>
+          <h2>Chat application</h2>
+        </div>
+        <div class="modal-body">
+          <p>I built a Node.js chat application with express and Socket.io,Socket.io enables real-time, bidirectional
+            and
+            event-based communication.
+            It works on every platform, browser or device, focusing equally on reliability and speed. This apllication
+            looks simple but the code is a bit advanced. I didn't focus on disagn but i put some animations, sound
+            effects and you can upload your picture for avatar.
+            I put this appliaction on heroku so
+            click on project to see how it looks</p>
+        </div>
+        <div class="modal-footer">
+          <h3><i class="fas fa-book-reader"></i></h3>
+        </div>
       </div>
     </div>
 
     <!-- Modal Structure for pong-->
-    <div id="modal3" class="modal">
+
+    <div id="simpleModal3" class="modal">
       <div class="modal-content">
-        <h4>Pong game in javaFx</h4>
-        <p>This application is written in Javafx library. I built this application for my final thesis. This project
-          illustrates the modularity of computer program, as well as a variety of different choices available to the
-          developer when making one application. In this example, components from a JavaFX library are used, such as
-          buttons,
-          rectangles, circles, progress bars, menu bars, and other visual components. Using Css and Fxml, an
-          application with a
-          very fine design and a lot of effects makes this application more beautiful and more interesting. To run this
-          application you need java development kit and Integrated development environment(IDe) for run Java code</p>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+        <div class="modal-header">
+          <span onclick="closeModal(3)" class="closeBtn">&times;</span>
+          <h2>Pong game in javaFx</h2>
+        </div>
+        <div class="modal-body">
+          <p>This application is written in Javafx library. I built this application for my final thesis. This project
+            illustrates the modularity of computer program, as well as a variety of different choices available to the
+            developer when making one application. In this example, components from a JavaFX library are used, such as
+            buttons,
+            rectangles, circles, progress bars, menu bars, and other visual components. Using Css and Fxml, an
+            application with a
+            very fine design and a lot of effects makes this application more beautiful and more interesting. To run
+            this
+            application you need java development kit and Integrated development environment(IDe) to run Java code</p>
+        </div>
+        <div class="modal-footer">
+          <h3><i class="fas fa-book-reader"></i></h3>
+        </div>
       </div>
     </div>
+
 
     <!-- Modal Structure for parallax-->
-    <div id="modal4" class="modal">
+    <div id="simpleModal4" class="modal">
       <div class="modal-content">
-        <h4>Parallax website</h4>
-        <p>I built very basic implementation of a parallax website with fixed scrolling using HTML and
-          CSS. We can scroll and the images will stay in place. I put this website in github so if you intrested click
-          github button to see how it looks</p>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+        <div class="modal-header">
+          <span onclick="closeModal(4)" class="closeBtn">&times;</span>
+          <h2>Parallax website</h2>
+        </div>
+        <div class="modal-body">
+          <p>I built very basic implementation of a parallax website with fixed scrolling using HTML and
+            CSS. We can scroll and the images will stay in place. I put this website in github so if you intrested
+            click
+            github button to see how it looks</p>
+        </div>
+        <div class="modal-footer">
+          <h3><i class="fas fa-book-reader"></i></h3>
+        </div>
       </div>
     </div>
 
+
+
+
+
     <!-- Modal Structure for information system-->
-    <div id="modal5" class="modal">
+
+    <div id="simpleModal5" class="modal">
       <div class="modal-content">
-        <h4>Software design</h4>
-        <p>In this application i built all information system of one computer's store. I included all the business
-          process of a store. I used enterprise architect this is an intuitive, flexible and powerful UML analysis and
-          design tool for building robust and
-          maintainable software. So if you want to check my application you need install first this software.</p>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+        <div class="modal-header">
+          <span onclick="closeModal(5)" class="closeBtn">&times;</span>
+          <h2>Software design</h2>
+        </div>
+        <div class="modal-body">
+          <p>In this application i built all information system of one computer's store. I included all the business
+            process of a store. I used enterprise architect this is an intuitive, flexible and powerful UML analysis
+            and
+            design tool for building robust and
+            maintainable software. So if you want to check my application you need install first this software.</p>
+        </div>
+        <div class="modal-footer">
+          <h3><i class="fas fa-book-reader"></i></h3>
+        </div>
       </div>
     </div>
 
     <!-- Modal Structure for vhdl-->
-    <div id="modal6" class="modal">
+
+    <div id="simpleModal6" class="modal">
       <div class="modal-content">
-        <h4>VHDL project</h4>
-        <p>In this project i created central processing unit(cpu) and data path with Altera Quartus tool. This is
-          programmable logic device enables analysis and synthesis of HDL designs, also includes an implementation of
-          VHDL. I implemented this entire project on Altera DE2-115 FPGA motherboard.</p>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+        <div class="modal-header">
+          <span onclick="closeModal(6)" class="closeBtn">&times;</span>
+          <h2>VHDL project</h2>
+        </div>
+        <div class="modal-body">
+          <p>In this project i created central processing unit(cpu) and data path with Altera Quartus tool. This is
+            programmable logic device enables analysis and synthesis of HDL designs, also includes an implementation of
+            VHDL. I implemented this entire project on Altera DE2-115 FPGA motherboard.</p>
+        </div>
+        <div class="modal-footer">
+          <h3><i class="fas fa-book-reader"></i></h3>
+        </div>
       </div>
     </div>
+
+
 
   </main>
   <footer>
     Copyright &copy; 2018
   </footer>
-  <script src='js/main.js'> </script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-  <script>
-    $(document).ready(function () {
-      $('.modal').modal();
-    });
-  </script>
+  <script src='js/main.js'> </script>
+  <script src='js/modal.js'> </script>
 </body>
 
 </html>
