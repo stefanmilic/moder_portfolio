@@ -161,7 +161,7 @@
   justify-content: center; }
   .list-program1 li {
     margin: 10px;
-    padding: 10px;
+    padding: 10px -30px 10px 10px;
     background: #fff;
     color: #000;
     border: 2px solid #eece1a; }
@@ -572,4 +572,6 @@ footer {
   #quote {
     margin-top: 10%;
     position: relative;
-    left: 15%; } }
+    left: 15%; }
+  .list-program1 {
+    justify-content: stretch; } }
