@@ -1,7 +1,7 @@
 .menu-btn {
-  position: absolute;
+  position: fixed;
   z-index: 3;
-  right: 35px;
+  right: 10%;
   top: 35px;
   cursor: pointer;
   transition: all 0.5s ease-out; }
@@ -154,26 +154,27 @@
   to {
     opacity: 1; } }
 
-.list-programs1, .list-programs2 {
+.list-program1 {
   list-style-type: none;
   display: flex;
-  flex-wrap: wrap; }
-  .list-programs1 li, .list-programs2 li {
+  flex-wrap: wrap;
+  justify-content: center; }
+  .list-program1 li {
     margin: 10px;
     padding: 10px;
     background: #fff;
     color: #000;
     border: 2px solid #eece1a; }
-    .list-programs1 li .card, .list-programs2 li .card {
+    .list-program1 li .card {
       width: 200px;
       height: 200px; }
-      .list-programs1 li .card .card-header, .list-programs2 li .card .card-header {
+      .list-program1 li .card .card-header {
         height: 80%;
         width: 100%;
         text-align: center; }
-        .list-programs1 li .card .card-header img, .list-programs2 li .card .card-header img {
+        .list-program1 li .card .card-header img {
           height: 100%; }
-      .list-programs1 li .card .footer, .list-programs2 li .card .footer {
+      .list-program1 li .card .footer {
         height: 20%;
         margin-bottom: 10px;
         padding: 10px; }
@@ -185,6 +186,7 @@ body {
   background: #444;
   color: #fff;
   height: 100%;
+  width: 100%;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
@@ -290,11 +292,10 @@ main {
 .projects {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px; }
+  grid-gap: 30px; }
   .projects .item {
-    width: 350px;
-    height: 350px;
-    margin-bottom: 20px; }
+    width: 100%;
+    height: 100%; }
     .projects .item #cover {
       height: 80%;
       width: 100%;
@@ -317,8 +318,6 @@ main {
           position: absolute;
           top: 50%;
           left: 50%;
-          -webkit-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
           text-align: center; }
       .projects .item #cover:hover {
@@ -483,11 +482,15 @@ footer {
     align-items: center;
     text-align: center; }
     main .lg-heading {
+      position: relative;
+      top: 0;
       line-height: 1;
       margin-bottom: 1rem;
       font-size: 5rem; }
     main h3 {
       font-size: 20px; }
+    main#home h1 {
+      margin-top: 15vh; }
   ul.menu-nav,
   div.menu-branding {
     float: none;
@@ -510,26 +513,30 @@ footer {
   .about-info {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
+    .about-info .bio p {
+      font-size: 20px;
+      word-spacing: 2px;
+      text-align: justify; }
   #about h1 {
     font-size: 50px; }
   .projects {
     grid-template-columns: 1fr;
-    text-align: center;
-    font-size: 15px; }
+    grid-row-gap: 10px; }
   .wrapper {
     grid-template-columns: 1fr; }
     .wrapper .boxes div {
       grid-template-columns: 1fr; }
   #quote {
-    position: absolute;
-    top: 60%;
-    left: 30%; } }
+    margin-top: 10%;
+    position: relative;
+    left: 35%; } }
 
 @media screen and (max-width: 500px) {
-  #home h1 {
-    margin-top: 10vh; }
+  main #home h1 {
+    margin-top: 5vh; }
   .projects {
-    grid-template-columns: 1fr; }
+    grid-template-columns: 1fr;
+    grid-gap: 50px; }
   .wrapper {
     grid-template-columns: 1fr; }
     .wrapper .boxes div {
@@ -539,6 +546,8 @@ footer {
     .wrapper .swing {
       animation: swing 2s ease forwards;
       transform-origin: 120px 80px; }
+  .resume {
+    padding: 5px; }
   .menu-nav {
     height: 60vh;
     transform: translate3d(-100%, 0, 0);
@@ -561,6 +570,6 @@ footer {
     100% {
       transform: scale(1); } }
   #quote {
-    position: absolute;
-    top: 70%;
-    left: 80px; } }
+    margin-top: 10%;
+    position: relative;
+    left: 15%; } }

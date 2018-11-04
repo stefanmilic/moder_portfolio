@@ -1,9 +1,9 @@
 // Meny button
 
 .menu-btn {
-  position: absolute;
+  position: fixed;
   z-index: 3;
-  right: 35px;
+  right: 10%;
   top: 35px;
   cursor: pointer;
   @include easeOut;

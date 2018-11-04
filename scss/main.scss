@@ -10,6 +10,7 @@ body {
   background: $primary-color;
   color: set-text-color($primary-color);
   height: 100%;
+  width: 100%;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
@@ -133,11 +134,10 @@ main {
 .projects {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 30px;
   .item {
-    width: 350px;
-    height: 350px;
-    margin-bottom: 20px;
+    width: 100%;
+    height: 100%;
     #cover {
       height: 80%;
       width: 100%;
@@ -160,8 +160,7 @@ main {
           position: absolute;
           top: 50%;
           left: 50%;
-          -webkit-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
+
           transform: translate(-50%, -50%);
           text-align: center;
         }

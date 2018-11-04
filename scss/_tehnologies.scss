@@ -1,7 +1,8 @@
-.list-programs1 {
+.list-program1 {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 
   li {
     margin: 10px;
@@ -30,8 +31,4 @@
       }
     }
   }
-}
-
-.list-programs2 {
-  @extend .list-programs1;
 }
