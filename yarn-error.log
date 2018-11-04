@@ -1,0 +1,42 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add aos@next
+
+PATH: 
+  C:\Users\milic\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\milic\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Program Files\Microsoft VS Code\bin;C:\Program Files (x86)\Yarn\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\milic\AppData\Local\Microsoft\WindowsApps;C:\Users\milic\AppData\Roaming\npm;C:\Users\milic\AppData\Local\atom\bin;D:\Sublime\Node.js\ExpressExp;C:\Program Files\heroku\bin;C:\Users\milic\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\milic\AppData\Local\Yarn\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.10.1
+
+Node version: 
+  8.11.2
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, unlink 'E:\Review again\Html\portfolio\node_modules\node-sass\vendor\win32-x64-57\binding.node'
+
+npm manifest: 
+  {
+    "name": "potrofolio",
+    "version": "1.0.0",
+    "description": "responsive portofolio website",
+    "main": "app.js",
+    "homepage": "https://stefanmilic.github.io/portfolio",
+    "scripts": {
+      "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+      "deploy": "gh-pages -d dist"
+    },
+    "author": "stefan milic",
+    "license": "ISC",
+    "dependencies": {
+      "gh-pages": "^2.0.1",
+      "node-sass": "^4.9.4"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

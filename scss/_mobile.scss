@@ -80,6 +80,11 @@
       grid-template-columns: 1fr;
     }
   }
+  #quote {
+    position: absolute;
+    top: 60%;
+    left: 30%;
+  }
 }
 
 //smartphones
@@ -135,5 +140,11 @@
     100% {
       transform: scale(1);
     }
+  }
+
+  #quote {
+    position: absolute;
+    top: 70%;
+    left: 80px;
   }
 }
