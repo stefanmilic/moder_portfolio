@@ -37,10 +37,12 @@ $(function() {
     }
   });
 
+  // close form in contact page
   cross.click(function() {
     $(".aside").addClass("swing");
   });
 
+  //submit form in contact page
   $("form").on("submit", function(e) {
     // inputName.val() = "";
     // textArea.val() = "";
@@ -50,9 +52,9 @@ $(function() {
       Message: textArea.val(),
       Email: inputEmail.val()
     }; // prihvata vrednost iz forme
-
+    //send parameters
     $.ajax({
-      type: "POST", //triger za post metodu u konteleru
+      type: "POST", //triger za post metodu u kontroleru
       url:
         "https://script.google.com/macros/s/AKfycbzSRkrpenGGdKBfMYkw4Xdzu9pIP-ZZt1zSURwb/exec", // url gde ce to da se izdesava
       data: todo, //prihvata vresnost polja i smesta u data varijablu i salje da se apdejtuje u kontroler
@@ -70,16 +72,17 @@ $(function() {
 
     return false;
   });
+  // this is loading spinner inactive for now
+  // let wrap = $("#spinner");
 
-  let wrap = $("#spinner");
+  // window.addEventListener("load", () => {
+  //   setTimeout(() => {
+  //     // document.body.removeChild(wrap);
+  //     wrap.remove();
+  //   }, 0);
+  // });
 
-  window.addEventListener("load", () => {
-    setTimeout(() => {
-      // document.body.removeChild(wrap);
-      wrap.remove();
-    }, 0);
-  });
-
+  // typing text
   let i = 0;
   let txt = "Stefan Milic";
   let speed = 200;
@@ -94,6 +97,7 @@ $(function() {
   }
   textmove();
 
+  // modals
   let modal = [];
   for (let i = 1; i <= 6; i++) {
     modal.push(document.getElementById("id0" + i));
@@ -117,9 +121,11 @@ $(function() {
       }
     });
   });
-  // Array.from(btns).map(item => {
-  //   item.addEventListener("click", function() {
-  //     item.parentNode.parentNode.parentNode.style.display = "none";
-  //   });
-  // });
+
+  //AoS animation
+  AOS.init({
+    duration: 2100
+  });
+
+  $(".scale").addClass("animated flipInX");
 });
