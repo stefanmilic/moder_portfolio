@@ -39,7 +39,7 @@ $(function() {
 
   // close form in contact page
   cross.click(function() {
-    $(".aside").addClass("swing");
+    $(".aside").fadeOut();
   });
 
   //submit form in contact page
