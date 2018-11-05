@@ -375,10 +375,6 @@ main {
   top: -400px;
   animation: drop 0.5s ease forwards; }
 
-.swing {
-  animation: swing 2s ease forwards;
-  transform-origin: 50px 50px; }
-
 .boxes {
   display: grid;
   grid-template-columns: 1fr;
@@ -459,15 +455,6 @@ footer {
     transform: translateY(420px);
     opacity: 1; } }
 
-@keyframes swing {
-  0% {
-    transform: translateY(420px) rotateX(0deg); }
-  75% {
-    transform: translateY(420px) rotateX(90deg); }
-  100% {
-    transform: translateY(-700px);
-    opacity: 0.3; } }
-
 @media screen and (min-width: 1171x) {
   .projects {
     grid-template-columns: repeat(3, 1fr); } }
@@ -543,9 +530,6 @@ footer {
       font-size: 25px;
       padding: 1rem;
       grid-template-columns: 1fr; }
-    .wrapper .swing {
-      animation: swing 2s ease forwards;
-      transform-origin: 120px 80px; }
   .resume {
     padding: 5px; }
   .menu-nav {

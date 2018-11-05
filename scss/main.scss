@@ -239,10 +239,6 @@ main {
   top: -400px;
   animation: drop 0.5s ease forwards;
 }
-.swing {
-  animation: swing 2s ease forwards;
-  transform-origin: 50px 50px;
-}
 
 .boxes {
   display: grid;
@@ -346,19 +342,6 @@ footer {
   100% {
     transform: translateY(420px);
     opacity: 1;
-  }
-}
-
-@keyframes swing {
-  0% {
-    transform: translateY(420px) rotateX(0deg);
-  }
-  75% {
-    transform: translateY(420px) rotateX(90deg);
-  }
-  100% {
-    transform: translateY(-700px);
-    opacity: 0.3;
   }
 }
 
